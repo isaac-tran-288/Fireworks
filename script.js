@@ -119,8 +119,13 @@ class fireworks{
     constructor(){
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d');
+        
         this.canvas.width = WIDTH;
         this.canvas.height = HEIGHT;
+        this.ctx.font = "30px Comic Sans MS";
+        this.ctx.fillStyle = "red";
+        this.ctx.textAlign = "center";
+        this.ctx.fillText("HAPPY NEW YEAR", this.canvas.width/2, this.canvas.height/2);
         document.body.appendChild(this.canvas);
 
         this.bullets = [];
@@ -141,6 +146,10 @@ class fireworks{
     clearScreen(){
         this.ctx.fillStyle = '#000000';
         this.ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        this.ctx.font = "50px Comic Sans MS";
+        this.ctx.fillStyle = "red";
+        this.ctx.textAlign = "center";
+        this.ctx.fillText("HAPPY NEW YEAR", WIDTH/2, HEIGHT/2);
     }
     draw(){
         this.clearScreen();
